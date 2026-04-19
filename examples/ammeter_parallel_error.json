@@ -1,0 +1,34 @@
+{
+  "name": "电流表并联错误",
+  "description": "电流表被并联在负载电阻两端，用于展示典型仪表接法异常。",
+  "ground": "gnd",
+  "components": [
+    {
+      "id": "V1",
+      "type": "voltage_source",
+      "name": "直流电源",
+      "nodes": ["n1", "gnd"],
+      "params": {
+        "voltage": 6.0
+      }
+    },
+    {
+      "id": "R1",
+      "type": "resistor",
+      "name": "负载电阻",
+      "nodes": ["n1", "gnd"],
+      "params": {
+        "resistance": 120.0
+      }
+    },
+    {
+      "id": "A1",
+      "type": "ammeter",
+      "name": "电流表",
+      "nodes": ["n1", "gnd"],
+      "params": {
+        "internal_resistance": 1e-6
+      }
+    }
+  ]
+}

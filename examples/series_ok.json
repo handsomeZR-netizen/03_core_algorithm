@@ -1,0 +1,34 @@
+{
+  "name": "正常串联电路",
+  "description": "单电源、单开关、单电阻的最小闭环，用于展示基础 MNA 求解。",
+  "ground": "gnd",
+  "components": [
+    {
+      "id": "V1",
+      "type": "voltage_source",
+      "name": "直流电源",
+      "nodes": ["n1", "gnd"],
+      "params": {
+        "voltage": 12.0
+      }
+    },
+    {
+      "id": "S1",
+      "type": "switch",
+      "name": "主开关",
+      "nodes": ["n1", "n2"],
+      "params": {
+        "state": "closed"
+      }
+    },
+    {
+      "id": "R1",
+      "type": "resistor",
+      "name": "负载电阻",
+      "nodes": ["n2", "gnd"],
+      "params": {
+        "resistance": 100.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "电压表串联错误",
+  "description": "电压表被串入主回路，表现为几乎开路的高阻支路。",
+  "ground": "gnd",
+  "components": [
+    {
+      "id": "V1",
+      "type": "voltage_source",
+      "name": "直流电源",
+      "nodes": ["n1", "gnd"],
+      "params": {
+        "voltage": 12.0
+      }
+    },
+    {
+      "id": "VM1",
+      "type": "voltmeter",
+      "name": "电压表",
+      "nodes": ["n1", "n2"],
+      "params": {
+        "internal_resistance": 1e12
+      }
+    },
+    {
+      "id": "R1",
+      "type": "resistor",
+      "name": "负载电阻",
+      "nodes": ["n2", "gnd"],
+      "params": {
+        "resistance": 100.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "基础并联电路",
+  "description": "一个 12V 电源驱动两条并联电阻支路，用于展示节点电压相同、支路电流分流。",
+  "ground": "gnd",
+  "components": [
+    {
+      "id": "V1",
+      "type": "voltage_source",
+      "name": "直流电源",
+      "nodes": ["n1", "gnd"],
+      "params": {
+        "voltage": 12.0
+      }
+    },
+    {
+      "id": "R1",
+      "type": "resistor",
+      "name": "支路电阻1",
+      "nodes": ["n1", "gnd"],
+      "params": {
+        "resistance": 100.0
+      }
+    },
+    {
+      "id": "R2",
+      "type": "resistor",
+      "name": "支路电阻2",
+      "nodes": ["n1", "gnd"],
+      "params": {
+        "resistance": 200.0
+      }
+    }
+  ]
+}
