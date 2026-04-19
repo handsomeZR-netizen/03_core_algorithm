@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #1d4ed8; text-decoration-color: #1d4ed8}
+.r2 {color: #1d4ed8; text-decoration-color: #1d4ed8; font-weight: bold}
+.r3 {color: #0f172a; text-decoration-color: #0f172a; font-weight: bold}
+.r4 {color: #475569; text-decoration-color: #475569}
+.r5 {color: #0f766e; text-decoration-color: #0f766e}
+.r6 {color: #b45309; text-decoration-color: #b45309; background-color: #fffbeb}
+.r7 {background-color: #fffbeb}
+.r8 {color: #b45309; text-decoration-color: #b45309; background-color: #fffbeb; font-weight: bold}
+.r9 {color: #334155; text-decoration-color: #334155; background-color: #fffbeb}
+.r10 {color: #0f766e; text-decoration-color: #0f766e; background-color: #ecfdf5}
+.r11 {background-color: #ecfdf5}
+.r12 {color: #0f766e; text-decoration-color: #0f766e; background-color: #ecfdf5; font-weight: bold}
+.r13 {color: #334155; text-decoration-color: #334155; background-color: #ecfdf5}
+.r14 {color: #b91c1c; text-decoration-color: #b91c1c; background-color: #fef2f2}
+.r15 {background-color: #fef2f2}
+.r16 {color: #b91c1c; text-decoration-color: #b91c1c; background-color: #fef2f2; font-weight: bold}
+.r17 {color: #334155; text-decoration-color: #334155; background-color: #fef2f2}
+.r18 {color: #94a3b8; text-decoration-color: #94a3b8}
+.r19 {color: #0f172a; text-decoration-color: #0f172a}
+.r20 {font-weight: bold}
+.r21 {color: #cbd5e1; text-decoration-color: #cbd5e1}
+.r22 {color: #b45309; text-decoration-color: #b45309}
+.r23 {color: #0f766e; text-decoration-color: #0f766e; font-weight: bold}
+.r24 {color: #334155; text-decoration-color: #334155}
+.r25 {color: #0f766e; text-decoration-color: #0f766e; font-style: italic}
+body {
+    color: #0f172a;
+    background-color: #f8fafc;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit"><span class="r1">+----------------------------------------------------------------------------------------------+</span>
+<span class="r1">|</span>                                                                                              <span class="r1">|</span>
+<span class="r1">|</span>                                 <span class="r2">GMAT Electrical Lab Showcase</span>                                 <span class="r1">|</span>
+<span class="r1">|</span>                      <span class="r3">Scenario D - Repeated Miswire with Teacher Handoff</span>                      <span class="r1">|</span>
+<span class="r1">|</span>      <span class="r4">Escalation after multiple unsuccessful attempts and declining student confidence.</span>       <span class="r1">|</span>
+<span class="r1">|</span>   <span class="r5">    Chen Yinuo - Introductory DC Lab - Objective: Explain why a voltmeter should be     </span>   <span class="r1">|</span>
+<span class="r1">|</span>   <span class="r5">      connected across a target component rather than inserted into the main loop.      </span>   <span class="r1">|</span>
+<span class="r1">|</span>                                                                                              <span class="r1">|</span>
+<span class="r1">+----------------------------------------------------------------------------------------------+</span>
+
+<span class="r6">+----------------------------------------------------------------------------------------------+</span>
+<span class="r6">|</span><span class="r7">                                                                                              </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r8">Circuit State                                                                             </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r8">                                    Instrument Miswire                                    </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r9">The repeated measurement miswire indicates that the learner now needs live teacher        </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r9">mediation rather than another round of autonomous prompting.                              </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">                                                                                              </span><span class="r6">|</span>
+<span class="r6">+----------------------------------------------------------------------------------------------+</span>
+<span class="r10">+----------------------------------------------------------------------------------------------+</span>
+<span class="r10">|</span><span class="r11">                                                                                              </span><span class="r10">|</span>
+<span class="r10">|</span><span class="r11">  </span><span class="r12">Solver Status                                                                             </span><span class="r11">  </span><span class="r10">|</span>
+<span class="r10">|</span><span class="r11">  </span><span class="r12">                                          Solved                                          </span><span class="r11">  </span><span class="r10">|</span>
+<span class="r10">|</span><span class="r11">  </span><span class="r13">DC operating point solved successfully.                                                   </span><span class="r11">  </span><span class="r10">|</span>
+<span class="r10">|</span><span class="r11">                                                                                              </span><span class="r10">|</span>
+<span class="r10">+----------------------------------------------------------------------------------------------+</span>
+<span class="r6">+----------------------------------------------------------------------------------------------+</span>
+<span class="r6">|</span><span class="r7">                                                                                              </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r8">Risk Level                                                                                </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r8">                                         Elevated                                         </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r9">OPEN_CIRCUIT (warning) | VOLTMETER_SERIES (warning)                                       </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">                                                                                              </span><span class="r6">|</span>
+<span class="r6">+----------------------------------------------------------------------------------------------+</span>
+<span class="r14">+----------------------------------------------------------------------------------------------+</span>
+<span class="r14">|</span><span class="r15">                                                                                              </span><span class="r14">|</span>
+<span class="r14">|</span><span class="r15">  </span><span class="r16">Intervention                                                                              </span><span class="r15">  </span><span class="r14">|</span>
+<span class="r14">|</span><span class="r15">  </span><span class="r16">                                     Teacher Handoff                                      </span><span class="r15">  </span><span class="r14">|</span>
+<span class="r14">|</span><span class="r15">  </span><span class="r17">Escalation is forced by repeated unsuccessful attempts in the showcase metadata.          </span><span class="r15">  </span><span class="r14">|</span>
+<span class="r14">|</span><span class="r15">                                                                                              </span><span class="r14">|</span>
+<span class="r14">+----------------------------------------------------------------------------------------------+</span>
+
+<span class="r18">+------------------------------------- Scenario Metadata --------------------------------------+</span>
+<span class="r18">|</span> <span class="r2">Student                        </span><span class="r19">Chen Yinuo                                                   </span> <span class="r18">|</span>
+<span class="r18">|</span> <span class="r2">Level                          </span><span class="r19">Introductory DC Lab                                          </span> <span class="r18">|</span>
+<span class="r18">|</span> <span class="r2">Task                           </span><span class="r19">Place the voltmeter correctly while preserving a meaningful  </span> <span class="r18">|</span>
+<span class="r18">|</span> <span class="r2">                               </span><span class="r19">current path.                                                </span> <span class="r18">|</span>
+<span class="r18">|</span> <span class="r2">Attempt                        </span><span class="r19">No. 4                                                        </span> <span class="r18">|</span>
+<span class="r18">|</span> <span class="r2">Elapsed                        </span><span class="r19">416s                                                         </span> <span class="r18">|</span>
+<span class="r18">|</span> <span class="r2">Errors                         </span><span class="r19">5                                                            </span> <span class="r18">|</span>
+<span class="r18">|</span> <span class="r2">Engagement                     </span><span class="r19">57/100                                                       </span> <span class="r18">|</span>
+<span class="r18">|</span> <span class="r2">Confidence                     </span><span class="r19">31/100                                                       </span> <span class="r18">|</span>
+<span class="r18">|</span> <span class="r2">Objective                      </span><span class="r19">Explain why a voltmeter should be connected across a target  </span> <span class="r18">|</span>
+<span class="r18">|</span> <span class="r2">                               </span><span class="r19">component rather than inserted into the main loop.           </span> <span class="r18">|</span>
+<span class="r18">+----------------------------------------------------------------------------------------------+</span>
+
+<span class="r18">+--------------------------------------+</span>          <span class="r18">+--------------------------------------+</span>      
+<span class="r18">|</span> <span class="r3">Circuit Components                  </span> <span class="r18">|</span>          <span class="r18">|</span> <span class="r3">Physical Reasoning Output           </span> <span class="r18">|</span>      
+<span class="r18">|</span> +----------------------------------+ <span class="r18">|</span>          <span class="r18">|</span> +----------------------------------+ <span class="r18">|</span>      
+<span class="r18">|</span> |<span class="r20"> ID  </span>|<span class="r20"> Type           </span>|<span class="r20"> Nodes     </span>| <span class="r18">|</span>          <span class="r18">|</span> |<span class="r20"> Node      </span>|<span class="r20">          Voltage (V) </span>| <span class="r18">|</span>      
+<span class="r18">|</span> |-----+----------------+-----------| <span class="r18">|</span>          <span class="r18">|</span> |-----------+----------------------| <span class="r18">|</span>      
+<span class="r18">|</span> |<span class="r2"> V1  </span>|<span class="r19"> voltage_source </span>|<span class="r4"> n1 -&gt; gnd </span>| <span class="r18">|</span>          <span class="r18">|</span> |<span class="r2"> gnd       </span>|<span class="r19">               0.0000 </span>| <span class="r18">|</span>      
+<span class="r18">|</span> |<span class="r2"> VM1 </span>|<span class="r19"> voltmeter      </span>|<span class="r4"> n1 -&gt; n2  </span>| <span class="r18">|</span>          <span class="r18">|</span> |<span class="r2"> n1        </span>|<span class="r19">              12.0000 </span>| <span class="r18">|</span>      
+<span class="r18">|</span> |<span class="r2"> R1  </span>|<span class="r19"> resistor       </span>|<span class="r4"> n2 -&gt; gnd </span>| <span class="r18">|</span>          <span class="r18">|</span> |<span class="r2"> n2        </span>|<span class="r19">               0.0000 </span>| <span class="r18">|</span>      
+<span class="r18">|</span> +----------------------------------+ <span class="r18">|</span>          <span class="r18">|</span> +----------------------------------+ <span class="r18">|</span>      
+<span class="r18">+--------------------------------------+</span>          <span class="r18">|</span> <span class="r21">----------------------------------  </span> <span class="r18">|</span>      
+                                                  <span class="r18">|</span> +----------------------------------+ <span class="r18">|</span>      
+                                                  <span class="r18">|</span> |<span class="r20"> Element   </span>|<span class="r20">     I (A) </span>|<span class="r20">    U (V) </span>| <span class="r18">|</span>      
+                                                  <span class="r18">|</span> |-----------+-----------+----------| <span class="r18">|</span>      
+                                                  <span class="r18">|</span> |<span class="r2"> V1        </span>|   -0.0000 |  12.0000 | <span class="r18">|</span>      
+                                                  <span class="r18">|</span> |<span class="r2"> VM1       </span>|    0.0000 |  12.0000 | <span class="r18">|</span>      
+                                                  <span class="r18">|</span> |<span class="r2"> R1        </span>|    0.0000 |   0.0000 | <span class="r18">|</span>      
+                                                  <span class="r18">|</span> +----------------------------------+ <span class="r18">|</span>      
+                                                  <span class="r18">+--------------------------------------+</span>      
+
+<span class="r22">+---------------------------------------------------------------------------------------+</span>       
+<span class="r22">|</span> <span class="r3">Diagnostic Signals                                                                   </span> <span class="r22">|</span>       
+<span class="r22">|</span> <span class="r22">OPEN_CIRCUIT - The source does not see a valid conductive return path.               </span> <span class="r22">|</span>       
+<span class="r22">|</span> <span class="r22">VOLTMETER_SERIES - The voltmeter has been inserted into the main loop.               </span> <span class="r22">|</span>       
+<span class="r22">+---------------------------------------------------------------------------------------+</span>       
+<span class="r5">+---------------------------------------------------------------------------------------+</span>       
+<span class="r5">|</span> <span class="r23">Heuristic Hints                                                                      </span> <span class="r5">|</span>       
+<span class="r5">|</span> <span class="r19">- The voltmeter is sitting inside the main loop instead of across the target element.</span> <span class="r5">|</span>       
+<span class="r5">|</span> <span class="r19">- No closed return path exists between the source terminals.                         </span> <span class="r5">|</span>       
+<span class="r5">|</span> <span class="r19">                                                                                     </span> <span class="r5">|</span>       
+<span class="r5">|</span> <span class="r23">Direct Fixes                                                                         </span> <span class="r5">|</span>       
+<span class="r5">|</span> <span class="r19">- Reconnect the voltmeter across the load terminals.                                 </span> <span class="r5">|</span>       
+<span class="r5">|</span> <span class="r19">- Restore a complete conductive loop before interpreting any readings.               </span> <span class="r5">|</span>       
+<span class="r5">|</span> <span class="r19">                                                                                     </span> <span class="r5">|</span>       
+<span class="r5">|</span> <span class="r23">Teacher Actions                                                                      </span> <span class="r5">|</span>       
+<span class="r5">|</span> <span class="r19">- Escalate to instructor-led correction after repeated or safety-sensitive errors.   </span> <span class="r5">|</span>       
+<span class="r5">|</span> <span class="r19">- Use the high-impedance model to explain why the loop current collapses.            </span> <span class="r5">|</span>       
+<span class="r5">+---------------------------------------------------------------------------------------+</span>       
+
+<span class="r1">+---------------------------------- Showcase Interpretation -----------------------------------+</span>
+<span class="r1">|</span> <span class="r2">System Judgement</span>                                                                             <span class="r1">|</span>
+<span class="r1">|</span> <span class="r19">The measurement chain behaves like an artificial open path because the voltmeter has been </span>   <span class="r1">|</span>
+<span class="r1">|</span> <span class="r19">inserted into the main loop instead of across the target load.</span>                               <span class="r1">|</span>
+<span class="r1">|</span> <span class="r21">--------------------------------------------------------------------------------------------</span> <span class="r1">|</span>
+<span class="r1">|</span> <span class="r2">Pedagogical Interpretation</span>                                                                   <span class="r1">|</span>
+<span class="r1">|</span> <span class="r19">The learner has attached a high-impedance instrument as though it were part of the </span>          <span class="r1">|</span>
+<span class="r1">|</span> <span class="r19">conductive path. This creates a strong opportunity to explain why voltmeters reveal </span>         <span class="r1">|</span>
+<span class="r1">|</span> <span class="r19">potential difference rather than carry the main loop current.</span>                                <span class="r1">|</span>
+<span class="r1">|</span> <span class="r21">--------------------------------------------------------------------------------------------</span> <span class="r1">|</span>
+<span class="r1">|</span> <span class="r2">Presentation Script</span>                                                                          <span class="r1">|</span>
+<span class="r1">|</span> <span class="r24">- Chen Yinuo is currently working on &#x27;Place the voltmeter correctly while preserving a </span>      <span class="r1">|</span>
+<span class="r1">|</span> <span class="r24">meaningful current path.&#x27; in scenario &#x27;Scenario D - Repeated Miswire with Teacher Handoff&#x27;.</span>  <span class="r1">|</span>
+<span class="r1">|</span> <span class="r24">- The system classifies the circuit state as Instrument Miswire with risk level elevated </span>    <span class="r1">|</span>
+<span class="r1">|</span> <span class="r24">after attempt 4.</span>                                                                             <span class="r1">|</span>
+<span class="r1">|</span> <span class="r24">- Pause autonomous guidance, bring the instructor into the loop, and use the current state </span>  <span class="r1">|</span>
+<span class="r1">|</span> <span class="r24">as a supervised correction case.</span>                                                             <span class="r1">|</span>
+<span class="r1">|</span> <span class="r21">--------------------------------------------------------------------------------------------</span> <span class="r1">|</span>
+<span class="r1">|</span> <span class="r2">Teacher Note</span>                                                                                 <span class="r1">|</span>
+<span class="r1">|</span> <span class="r19">This scenario is ideal for demonstrating the handoff boundary between automated scaffolding </span> <span class="r1">|</span>
+<span class="r1">|</span> <span class="r19">and instructor-led intervention.</span>                                                             <span class="r1">|</span>
+<span class="r1">+----------------------------------------------------------------------------------------------+</span>
+
+           <span class="r25">GMAT showcase mode: from circuit state reasoning to instructional action.</span>            
+</code></pre>
+</body>
+</html>

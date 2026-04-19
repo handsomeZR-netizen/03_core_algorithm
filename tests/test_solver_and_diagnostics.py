@@ -140,6 +140,80 @@ def test_cli_smoke_output_contains_expected_sections() -> None:
     assert "教学反馈建议" in stdout
 
 
+def test_demo_mode_lists_curated_scenarios() -> None:
+    """Demo mode should expose the curated showcase scenario catalog."""
+    completed = subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "src.cli",
+            "--list-scenarios",
+        ],
+        cwd=PROJECT_ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    stdout = completed.stdout
+    assert "normal_lab" in stdout
+    assert "teacher_handoff" in stdout
+
+
+def test_demo_mode_renders_showcase_panels() -> None:
+    """Demo mode should render the Rich showcase layout for a curated scenario."""
+    completed = subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "src.cli",
+            "--demo",
+            "--scenario",
+            "normal_lab",
+            "--compact",
+        ],
+        cwd=PROJECT_ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    stdout = completed.stdout
+    assert "GMAT Electrical Lab Showcase" in stdout
+    assert "Showcase Interpretation" in stdout
+    assert "Circuit State" in stdout
+
+
+def test_demo_mode_exports_svg_html_and_json(tmp_path: Path) -> None:
+    """Demo mode should export its showcase assets without failing."""
+    svg_path = tmp_path / "demo.svg"
+    html_path = tmp_path / "demo.html"
+    json_path = tmp_path / "demo.json"
+
+    subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "src.cli",
+            "--demo",
+            "--scenario",
+            "short_risk",
+            "--compact",
+            "--export-svg",
+            str(svg_path),
+            "--export-html",
+            str(html_path),
+            "--export-json",
+            str(json_path),
+        ],
+        cwd=PROJECT_ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    assert svg_path.exists()
+    assert html_path.exists()
+    assert json_path.exists()
+
+
 def test_json_examples_can_be_loaded_round_trip() -> None:
     """Every bundled example should be loadable and JSON-complete."""
     for path in EXAMPLES_DIR.glob("*.json"):

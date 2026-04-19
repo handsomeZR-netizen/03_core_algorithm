@@ -1,0 +1,264 @@
+{
+  "scenario": {
+    "id": "teacher_handoff",
+    "title": "Scenario D - Repeated Miswire with Teacher Handoff",
+    "subtitle": "Escalation after multiple unsuccessful attempts and declining student confidence.",
+    "example_file": "voltmeter_series_error.json",
+    "student_name": "Chen Yinuo",
+    "student_level": "Introductory DC Lab",
+    "lab_task": "Place the voltmeter correctly while preserving a meaningful current path.",
+    "attempt_index": 4,
+    "elapsed_seconds": 416,
+    "error_count": 5,
+    "engagement_score": 57,
+    "confidence_score": 31,
+    "learning_objective": "Explain why a voltmeter should be connected across a target component rather than inserted into the main loop.",
+    "presentation_summary": "The repeated measurement miswire indicates that the learner now needs live teacher mediation rather than another round of autonomous prompting.",
+    "teacher_note": "This scenario is ideal for demonstrating the handoff boundary between automated scaffolding and instructor-led intervention.",
+    "force_teacher_handoff": true
+  },
+  "circuit": {
+    "name": "电压表串联错误",
+    "description": "电压表被串入主回路，表现为几乎开路的高阻支路。",
+    "ground": "gnd",
+    "components": [
+      {
+        "id": "V1",
+        "type": "voltage_source",
+        "name": "直流电源",
+        "nodes": [
+          "n1",
+          "gnd"
+        ],
+        "params": {
+          "voltage": 12.0
+        }
+      },
+      {
+        "id": "VM1",
+        "type": "voltmeter",
+        "name": "电压表",
+        "nodes": [
+          "n1",
+          "n2"
+        ],
+        "params": {
+          "internal_resistance": 1000000000000.0
+        }
+      },
+      {
+        "id": "R1",
+        "type": "resistor",
+        "name": "负载电阻",
+        "nodes": [
+          "n2",
+          "gnd"
+        ],
+        "params": {
+          "resistance": 100.0
+        }
+      }
+    ]
+  },
+  "solver_result": {
+    "solved": true,
+    "status": "solved",
+    "message": "DC operating point solved successfully.",
+    "node_voltages": {
+      "gnd": 0.0,
+      "n1": 12.0,
+      "n2": 1.19999999988e-09
+    },
+    "element_results": [
+      {
+        "id": "V1",
+        "type": "voltage_source",
+        "name": "直流电源",
+        "nodes": [
+          "n1",
+          "gnd"
+        ],
+        "current": -1.19999999988e-11,
+        "voltage_drop": 12.0,
+        "power": -1.439999999856e-10,
+        "extra": {
+          "voltage": 12.0,
+          "model": "independent_voltage_source"
+        }
+      },
+      {
+        "id": "VM1",
+        "type": "voltmeter",
+        "name": "电压表",
+        "nodes": [
+          "n1",
+          "n2"
+        ],
+        "current": 1.19999999988e-11,
+        "voltage_drop": 11.9999999988,
+        "power": 1.439999999712e-10,
+        "extra": {
+          "effective_resistance": 1000000000000.0,
+          "model": "idealized_voltmeter"
+        }
+      },
+      {
+        "id": "R1",
+        "type": "resistor",
+        "name": "负载电阻",
+        "nodes": [
+          "n2",
+          "gnd"
+        ],
+        "current": 1.19999999988e-11,
+        "voltage_drop": 1.19999999988e-09,
+        "power": 1.4399999997120003e-20,
+        "extra": {
+          "effective_resistance": 100.0,
+          "model": "resistor"
+        }
+      }
+    ],
+    "total_power": 4.540964784928205e-28,
+    "metadata": {
+      "node_map": {
+        "n1": 0,
+        "n2": 1
+      },
+      "voltage_source_currents": {
+        "V1": -1.19999999988e-11
+      },
+      "todo": [
+        "TODO: 仅支持直流稳态两端器件网络。",
+        "TODO: 暂不支持受控源、交流分析、瞬态分析。"
+      ]
+    }
+  },
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "code": "OPEN_CIRCUIT",
+      "title": "开路",
+      "message": "电源 V1 的正负端没有形成有效闭合回路。",
+      "component_ids": [
+        "V1"
+      ],
+      "suggestion": "检查开关状态、连线方向，以及是否存在回到电源负极的路径。"
+    },
+    {
+      "severity": "warning",
+      "code": "VOLTMETER_SERIES",
+      "title": "电压表接法异常",
+      "message": "电压表 VM1 没有并联在被测元件两端，更像是串联插入主回路。",
+      "component_ids": [
+        "VM1"
+      ],
+      "suggestion": "电压表应并联连接在被测元件两端，而不是作为主通路的一部分。"
+    }
+  ],
+  "teaching_feedback": {
+    "overall_level": "medium",
+    "heuristic_hints": [
+      "先追踪电流路径：电流是否能从电源正极出发，再回到负极？",
+      "电压表测的是两点电势差，因此应关注它连接的是哪两个端点。"
+    ],
+    "direct_fixes": [
+      "优先检查开关是否断开，以及是否缺少返回电源负极的连接。",
+      "把电压表并接在被测元件两端，而不是插入主回路。"
+    ],
+    "teacher_actions": [
+      "教师可现场画出最小闭合回路，对比开路前后电流读数变化。",
+      "教师可示范把电压表从主回路挪到负载两端，比较读数变化。"
+    ]
+  },
+  "presentation": {
+    "scenario_title": "Scenario D - Repeated Miswire with Teacher Handoff",
+    "scenario_subtitle": "Escalation after multiple unsuccessful attempts and declining student confidence.",
+    "summary_cards": [
+      {
+        "title": "Circuit State",
+        "value": "Instrument Miswire",
+        "detail": "The repeated measurement miswire indicates that the learner now needs live teacher mediation rather than another round of autonomous prompting.",
+        "tone": "warning"
+      },
+      {
+        "title": "Solver Status",
+        "value": "Solved",
+        "detail": "DC operating point solved successfully.",
+        "tone": "good"
+      },
+      {
+        "title": "Risk Level",
+        "value": "Elevated",
+        "detail": "OPEN_CIRCUIT (warning) | VOLTMETER_SERIES (warning)",
+        "tone": "warning"
+      },
+      {
+        "title": "Intervention",
+        "value": "Teacher Handoff",
+        "detail": "Escalation is forced by repeated unsuccessful attempts in the showcase metadata.",
+        "tone": "critical"
+      }
+    ],
+    "system_judgement": "The measurement chain behaves like an artificial open path because the voltmeter has been inserted into the main loop instead of across the target load.",
+    "pedagogical_interpretation": "The learner has attached a high-impedance instrument as though it were part of the conductive path. This creates a strong opportunity to explain why voltmeters reveal potential difference rather than carry the main loop current.",
+    "recommended_next_step": "Pause autonomous guidance, bring the instructor into the loop, and use the current state as a supervised correction case.",
+    "presentation_script": [
+      "Chen Yinuo is currently working on 'Place the voltmeter correctly while preserving a meaningful current path.' in scenario 'Scenario D - Repeated Miswire with Teacher Handoff'.",
+      "The system classifies the circuit state as Instrument Miswire with risk level elevated after attempt 4.",
+      "Pause autonomous guidance, bring the instructor into the loop, and use the current state as a supervised correction case."
+    ],
+    "teacher_note": "This scenario is ideal for demonstrating the handoff boundary between automated scaffolding and instructor-led intervention.",
+    "metadata_rows": [
+      [
+        "Student",
+        "Chen Yinuo"
+      ],
+      [
+        "Level",
+        "Introductory DC Lab"
+      ],
+      [
+        "Task",
+        "Place the voltmeter correctly while preserving a meaningful current path."
+      ],
+      [
+        "Attempt",
+        "No. 4"
+      ],
+      [
+        "Elapsed",
+        "416s"
+      ],
+      [
+        "Errors",
+        "5"
+      ],
+      [
+        "Engagement",
+        "57/100"
+      ],
+      [
+        "Confidence",
+        "31/100"
+      ],
+      [
+        "Objective",
+        "Explain why a voltmeter should be connected across a target component rather than inserted into the main loop."
+      ]
+    ],
+    "heuristic_hints_display": [
+      "The voltmeter is sitting inside the main loop instead of across the target element.",
+      "No closed return path exists between the source terminals."
+    ],
+    "direct_fixes_display": [
+      "Reconnect the voltmeter across the load terminals.",
+      "Restore a complete conductive loop before interpreting any readings."
+    ],
+    "teacher_actions_display": [
+      "Escalate to instructor-led correction after repeated or safety-sensitive errors.",
+      "Use the high-impedance model to explain why the loop current collapses.",
+      "Reconstruct the minimal closed loop on the board before returning control to the learner."
+    ]
+  }
+}

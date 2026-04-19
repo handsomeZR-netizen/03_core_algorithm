@@ -1,0 +1,246 @@
+{
+  "scenario": {
+    "id": "short_risk",
+    "title": "Scenario C - Source Short-Risk Escalation",
+    "subtitle": "A high-priority failure mode where safety takes precedence over conceptual scaffolding.",
+    "example_file": "short_risk.json",
+    "student_name": "Zhao Mingrui",
+    "student_level": "Introductory DC Lab",
+    "lab_task": "Identify and eliminate unsafe low-resistance paths in a basic power circuit.",
+    "attempt_index": 2,
+    "elapsed_seconds": 97,
+    "error_count": 1,
+    "engagement_score": 73,
+    "confidence_score": 48,
+    "learning_objective": "Recognize why unsafe wiring must be handled before measurement reasoning.",
+    "presentation_summary": "The system detects an unsafe path across the source, so the teaching flow shifts into immediate containment and correction.",
+    "teacher_note": "Use this case to emphasize the difference between conceptual mistakes and safety-sensitive mistakes.",
+    "force_teacher_handoff": true
+  },
+  "circuit": {
+    "name": "近似短路风险",
+    "description": "一个闭合开关直接跨接在电源两端，用于触发短路风险诊断。",
+    "ground": "gnd",
+    "components": [
+      {
+        "id": "V1",
+        "type": "voltage_source",
+        "name": "直流电源",
+        "nodes": [
+          "n1",
+          "gnd"
+        ],
+        "params": {
+          "voltage": 6.0
+        }
+      },
+      {
+        "id": "S1",
+        "type": "switch",
+        "name": "错误旁路开关",
+        "nodes": [
+          "n1",
+          "gnd"
+        ],
+        "params": {
+          "state": "closed"
+        }
+      },
+      {
+        "id": "R1",
+        "type": "resistor",
+        "name": "负载电阻",
+        "nodes": [
+          "n1",
+          "gnd"
+        ],
+        "params": {
+          "resistance": 100.0
+        }
+      }
+    ]
+  },
+  "solver_result": {
+    "solved": true,
+    "status": "solved",
+    "message": "DC operating point solved successfully.",
+    "node_voltages": {
+      "gnd": 0.0,
+      "n1": 5.999999999999999
+    },
+    "element_results": [
+      {
+        "id": "V1",
+        "type": "voltage_source",
+        "name": "直流电源",
+        "nodes": [
+          "n1",
+          "gnd"
+        ],
+        "current": -6000000.06,
+        "voltage_drop": 5.999999999999999,
+        "power": -36000000.35999999,
+        "extra": {
+          "voltage": 6.0,
+          "model": "independent_voltage_source"
+        }
+      },
+      {
+        "id": "S1",
+        "type": "switch",
+        "name": "错误旁路开关",
+        "nodes": [
+          "n1",
+          "gnd"
+        ],
+        "current": 5999999.999999999,
+        "voltage_drop": 5.999999999999999,
+        "power": 35999999.99999999,
+        "extra": {
+          "effective_resistance": 1e-06,
+          "model": "closed_switch"
+        }
+      },
+      {
+        "id": "R1",
+        "type": "resistor",
+        "name": "负载电阻",
+        "nodes": [
+          "n1",
+          "gnd"
+        ],
+        "current": 0.05999999999999999,
+        "voltage_drop": 5.999999999999999,
+        "power": 0.3599999999999999,
+        "extra": {
+          "effective_resistance": 100.0,
+          "model": "resistor"
+        }
+      }
+    ],
+    "total_power": 5.960463234089275e-10,
+    "metadata": {
+      "node_map": {
+        "n1": 0
+      },
+      "voltage_source_currents": {
+        "V1": -6000000.06
+      },
+      "todo": [
+        "TODO: 仅支持直流稳态两端器件网络。",
+        "TODO: 暂不支持受控源、交流分析、瞬态分析。"
+      ]
+    }
+  },
+  "diagnostics": [
+    {
+      "severity": "error",
+      "code": "SHORT_RISK",
+      "title": "短路风险",
+      "message": "电源 V1 的两端存在近似零电阻连通路径，存在短路风险。",
+      "component_ids": [
+        "V1"
+      ],
+      "suggestion": "移除直接跨接电源的低阻路径，确保电流先经过负载。"
+    }
+  ],
+  "teaching_feedback": {
+    "overall_level": "high",
+    "heuristic_hints": [
+      "观察电源两端之间是否存在几乎不经过负载的低阻通路。"
+    ],
+    "direct_fixes": [
+      "移除直接跨接电源的导通支路，让电流先经过电阻等负载元件。"
+    ],
+    "teacher_actions": [
+      "教师应立即介入，强调短路的安全风险与实验规范。"
+    ]
+  },
+  "presentation": {
+    "scenario_title": "Scenario C - Source Short-Risk Escalation",
+    "scenario_subtitle": "A high-priority failure mode where safety takes precedence over conceptual scaffolding.",
+    "summary_cards": [
+      {
+        "title": "Circuit State",
+        "value": "Unsafe Wiring",
+        "detail": "The system detects an unsafe path across the source, so the teaching flow shifts into immediate containment and correction.",
+        "tone": "critical"
+      },
+      {
+        "title": "Solver Status",
+        "value": "Solved",
+        "detail": "DC operating point solved successfully.",
+        "tone": "good"
+      },
+      {
+        "title": "Risk Level",
+        "value": "Critical",
+        "detail": "SHORT_RISK (error)",
+        "tone": "critical"
+      },
+      {
+        "title": "Intervention",
+        "value": "Teacher Handoff",
+        "detail": "Escalation is forced by repeated unsuccessful attempts in the showcase metadata.",
+        "tone": "critical"
+      }
+    ],
+    "system_judgement": "The wiring creates a near-zero-resistance path across the source and must be treated as unsafe before any instructional discussion continues.",
+    "pedagogical_interpretation": "This is not merely a wrong answer; it is a safety-sensitive state. The instructional priority shifts from conceptual coaching to immediate risk containment and supervised correction.",
+    "recommended_next_step": "Pause autonomous guidance, bring the instructor into the loop, and use the current state as a supervised correction case.",
+    "presentation_script": [
+      "Zhao Mingrui is currently working on 'Identify and eliminate unsafe low-resistance paths in a basic power circuit.' in scenario 'Scenario C - Source Short-Risk Escalation'.",
+      "The system classifies the circuit state as Unsafe Wiring with risk level critical after attempt 2.",
+      "Pause autonomous guidance, bring the instructor into the loop, and use the current state as a supervised correction case."
+    ],
+    "teacher_note": "Use this case to emphasize the difference between conceptual mistakes and safety-sensitive mistakes.",
+    "metadata_rows": [
+      [
+        "Student",
+        "Zhao Mingrui"
+      ],
+      [
+        "Level",
+        "Introductory DC Lab"
+      ],
+      [
+        "Task",
+        "Identify and eliminate unsafe low-resistance paths in a basic power circuit."
+      ],
+      [
+        "Attempt",
+        "No. 2"
+      ],
+      [
+        "Elapsed",
+        "97s"
+      ],
+      [
+        "Errors",
+        "1"
+      ],
+      [
+        "Engagement",
+        "73/100"
+      ],
+      [
+        "Confidence",
+        "48/100"
+      ],
+      [
+        "Objective",
+        "Recognize why unsafe wiring must be handled before measurement reasoning."
+      ]
+    ],
+    "heuristic_hints_display": [
+      "The source terminals are effectively bridged by a very low-resistance path."
+    ],
+    "direct_fixes_display": [
+      "Break the shortcut path before restarting the circuit."
+    ],
+    "teacher_actions_display": [
+      "Escalate to instructor-led correction after repeated or safety-sensitive errors.",
+      "Switch from autonomous coaching to supervised correction immediately."
+    ]
+  }
+}

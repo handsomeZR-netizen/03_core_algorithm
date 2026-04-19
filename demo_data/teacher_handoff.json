@@ -1,0 +1,18 @@
+{
+  "id": "teacher_handoff",
+  "title": "Scenario D - Repeated Miswire with Teacher Handoff",
+  "subtitle": "Escalation after multiple unsuccessful attempts and declining student confidence.",
+  "example_file": "voltmeter_series_error.json",
+  "student_name": "Chen Yinuo",
+  "student_level": "Introductory DC Lab",
+  "lab_task": "Place the voltmeter correctly while preserving a meaningful current path.",
+  "attempt_index": 4,
+  "elapsed_seconds": 416,
+  "error_count": 5,
+  "engagement_score": 57,
+  "confidence_score": 31,
+  "learning_objective": "Explain why a voltmeter should be connected across a target component rather than inserted into the main loop.",
+  "presentation_summary": "The repeated measurement miswire indicates that the learner now needs live teacher mediation rather than another round of autonomous prompting.",
+  "teacher_note": "This scenario is ideal for demonstrating the handoff boundary between automated scaffolding and instructor-led intervention.",
+  "force_teacher_handoff": true
+}

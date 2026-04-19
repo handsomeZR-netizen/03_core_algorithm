@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #1d4ed8; text-decoration-color: #1d4ed8}
+.r2 {color: #1d4ed8; text-decoration-color: #1d4ed8; font-weight: bold}
+.r3 {color: #0f172a; text-decoration-color: #0f172a; font-weight: bold}
+.r4 {color: #475569; text-decoration-color: #475569}
+.r5 {color: #0f766e; text-decoration-color: #0f766e}
+.r6 {color: #b91c1c; text-decoration-color: #b91c1c; background-color: #fef2f2}
+.r7 {background-color: #fef2f2}
+.r8 {color: #b91c1c; text-decoration-color: #b91c1c; background-color: #fef2f2; font-weight: bold}
+.r9 {color: #334155; text-decoration-color: #334155; background-color: #fef2f2}
+.r10 {color: #0f766e; text-decoration-color: #0f766e; background-color: #ecfdf5}
+.r11 {background-color: #ecfdf5}
+.r12 {color: #0f766e; text-decoration-color: #0f766e; background-color: #ecfdf5; font-weight: bold}
+.r13 {color: #334155; text-decoration-color: #334155; background-color: #ecfdf5}
+.r14 {color: #94a3b8; text-decoration-color: #94a3b8}
+.r15 {color: #0f172a; text-decoration-color: #0f172a}
+.r16 {font-weight: bold}
+.r17 {color: #cbd5e1; text-decoration-color: #cbd5e1}
+.r18 {color: #b45309; text-decoration-color: #b45309}
+.r19 {color: #b91c1c; text-decoration-color: #b91c1c}
+.r20 {color: #0f766e; text-decoration-color: #0f766e; font-weight: bold}
+.r21 {color: #334155; text-decoration-color: #334155}
+.r22 {color: #0f766e; text-decoration-color: #0f766e; font-style: italic}
+body {
+    color: #0f172a;
+    background-color: #f8fafc;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit"><span class="r1">+----------------------------------------------------------------------------------------------+</span>
+<span class="r1">|</span>                                                                                              <span class="r1">|</span>
+<span class="r1">|</span>                                 <span class="r2">GMAT Electrical Lab Showcase</span>                                 <span class="r1">|</span>
+<span class="r1">|</span>                          <span class="r3">Scenario C - Source Short-Risk Escalation</span>                           <span class="r1">|</span>
+<span class="r1">|</span>   <span class="r4">A high-priority failure mode where safety takes precedence over conceptual scaffolding.</span>    <span class="r1">|</span>
+<span class="r1">|</span>   <span class="r5">  Zhao Mingrui - Introductory DC Lab - Objective: Recognize why unsafe wiring must be   </span>   <span class="r1">|</span>
+<span class="r1">|</span>   <span class="r5">                         handled before measurement reasoning.                          </span>   <span class="r1">|</span>
+<span class="r1">|</span>                                                                                              <span class="r1">|</span>
+<span class="r1">+----------------------------------------------------------------------------------------------+</span>
+
+<span class="r6">+----------------------------------------------------------------------------------------------+</span>
+<span class="r6">|</span><span class="r7">                                                                                              </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r8">Circuit State                                                                             </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r8">                                      Unsafe Wiring                                       </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r9">The system detects an unsafe path across the source, so the teaching flow shifts into     </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r9">immediate containment and correction.                                                     </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">                                                                                              </span><span class="r6">|</span>
+<span class="r6">+----------------------------------------------------------------------------------------------+</span>
+<span class="r10">+----------------------------------------------------------------------------------------------+</span>
+<span class="r10">|</span><span class="r11">                                                                                              </span><span class="r10">|</span>
+<span class="r10">|</span><span class="r11">  </span><span class="r12">Solver Status                                                                             </span><span class="r11">  </span><span class="r10">|</span>
+<span class="r10">|</span><span class="r11">  </span><span class="r12">                                          Solved                                          </span><span class="r11">  </span><span class="r10">|</span>
+<span class="r10">|</span><span class="r11">  </span><span class="r13">DC operating point solved successfully.                                                   </span><span class="r11">  </span><span class="r10">|</span>
+<span class="r10">|</span><span class="r11">                                                                                              </span><span class="r10">|</span>
+<span class="r10">+----------------------------------------------------------------------------------------------+</span>
+<span class="r6">+----------------------------------------------------------------------------------------------+</span>
+<span class="r6">|</span><span class="r7">                                                                                              </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r8">Risk Level                                                                                </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r8">                                         Critical                                         </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r9">SHORT_RISK (error)                                                                        </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">                                                                                              </span><span class="r6">|</span>
+<span class="r6">+----------------------------------------------------------------------------------------------+</span>
+<span class="r6">+----------------------------------------------------------------------------------------------+</span>
+<span class="r6">|</span><span class="r7">                                                                                              </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r8">Intervention                                                                              </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r8">                                     Teacher Handoff                                      </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r9">Escalation is forced by repeated unsuccessful attempts in the showcase metadata.          </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">                                                                                              </span><span class="r6">|</span>
+<span class="r6">+----------------------------------------------------------------------------------------------+</span>
+
+<span class="r14">+------------------------------------- Scenario Metadata --------------------------------------+</span>
+<span class="r14">|</span> <span class="r2">Student                        </span><span class="r15">Zhao Mingrui                                                 </span> <span class="r14">|</span>
+<span class="r14">|</span> <span class="r2">Level                          </span><span class="r15">Introductory DC Lab                                          </span> <span class="r14">|</span>
+<span class="r14">|</span> <span class="r2">Task                           </span><span class="r15">Identify and eliminate unsafe low-resistance paths in a basic</span> <span class="r14">|</span>
+<span class="r14">|</span> <span class="r2">                               </span><span class="r15">power circuit.                                               </span> <span class="r14">|</span>
+<span class="r14">|</span> <span class="r2">Attempt                        </span><span class="r15">No. 2                                                        </span> <span class="r14">|</span>
+<span class="r14">|</span> <span class="r2">Elapsed                        </span><span class="r15">97s                                                          </span> <span class="r14">|</span>
+<span class="r14">|</span> <span class="r2">Errors                         </span><span class="r15">1                                                            </span> <span class="r14">|</span>
+<span class="r14">|</span> <span class="r2">Engagement                     </span><span class="r15">73/100                                                       </span> <span class="r14">|</span>
+<span class="r14">|</span> <span class="r2">Confidence                     </span><span class="r15">48/100                                                       </span> <span class="r14">|</span>
+<span class="r14">|</span> <span class="r2">Objective                      </span><span class="r15">Recognize why unsafe wiring must be handled before           </span> <span class="r14">|</span>
+<span class="r14">|</span> <span class="r2">                               </span><span class="r15">measurement reasoning.                                       </span> <span class="r14">|</span>
+<span class="r14">+----------------------------------------------------------------------------------------------+</span>
+
+<span class="r14">+--------------------------------------+</span>        <span class="r14">+--------------------------------------+</span>        
+<span class="r14">|</span> <span class="r3">Circuit Components                  </span> <span class="r14">|</span>        <span class="r14">|</span> <span class="r3">Physical Reasoning Output           </span> <span class="r14">|</span>        
+<span class="r14">|</span> +----------------------------------+ <span class="r14">|</span>        <span class="r14">|</span> +----------------------------------+ <span class="r14">|</span>        
+<span class="r14">|</span> |<span class="r16"> ID  </span>|<span class="r16"> Type           </span>|<span class="r16"> Nodes     </span>| <span class="r14">|</span>        <span class="r14">|</span> |<span class="r16"> Node      </span>|<span class="r16">          Voltage (V) </span>| <span class="r14">|</span>        
+<span class="r14">|</span> |-----+----------------+-----------| <span class="r14">|</span>        <span class="r14">|</span> |-----------+----------------------| <span class="r14">|</span>        
+<span class="r14">|</span> |<span class="r2"> V1  </span>|<span class="r15"> voltage_source </span>|<span class="r4"> n1 -&gt; gnd </span>| <span class="r14">|</span>        <span class="r14">|</span> |<span class="r2"> gnd       </span>|<span class="r15">               0.0000 </span>| <span class="r14">|</span>        
+<span class="r14">|</span> |<span class="r2"> S1  </span>|<span class="r15"> switch         </span>|<span class="r4"> n1 -&gt; gnd </span>| <span class="r14">|</span>        <span class="r14">|</span> |<span class="r2"> n1        </span>|<span class="r15">               6.0000 </span>| <span class="r14">|</span>        
+<span class="r14">|</span> |<span class="r2"> R1  </span>|<span class="r15"> resistor       </span>|<span class="r4"> n1 -&gt; gnd </span>| <span class="r14">|</span>        <span class="r14">|</span> +----------------------------------+ <span class="r14">|</span>        
+<span class="r14">|</span> +----------------------------------+ <span class="r14">|</span>        <span class="r14">|</span> <span class="r17">----------------------------------  </span> <span class="r14">|</span>        
+<span class="r14">+--------------------------------------+</span>        <span class="r14">|</span> +----------------------------------+ <span class="r14">|</span>        
+                                                <span class="r14">|</span> |<span class="r16"> Element </span>|<span class="r16">         I (A) </span>|<span class="r16">  U (V) </span>| <span class="r14">|</span>        
+                                                <span class="r14">|</span> |---------+---------------+--------| <span class="r14">|</span>        
+                                                <span class="r14">|</span> |<span class="r2"> V1      </span>| -6000000.0600 | 6.0000 | <span class="r14">|</span>        
+                                                <span class="r14">|</span> |<span class="r2"> S1      </span>|  6000000.0000 | 6.0000 | <span class="r14">|</span>        
+                                                <span class="r14">|</span> |<span class="r2"> R1      </span>|        0.0600 | 6.0000 | <span class="r14">|</span>        
+                                                <span class="r14">|</span> +----------------------------------+ <span class="r14">|</span>        
+                                                <span class="r14">+--------------------------------------+</span>        
+
+<span class="r18">+------------------------------------------------------------------------------------+</span>          
+<span class="r18">|</span> <span class="r3">Diagnostic Signals                                                                </span> <span class="r18">|</span>          
+<span class="r18">|</span> <span class="r19">SHORT_RISK - The source terminals are connected by a near-zero-resistance path.   </span> <span class="r18">|</span>          
+<span class="r18">+------------------------------------------------------------------------------------+</span>          
+<span class="r5">+------------------------------------------------------------------------------------+</span>          
+<span class="r5">|</span> <span class="r20">Heuristic Hints                                                                   </span> <span class="r5">|</span>          
+<span class="r5">|</span> <span class="r15">- The source terminals are effectively bridged by a very low-resistance path.     </span> <span class="r5">|</span>          
+<span class="r5">|</span> <span class="r15">                                                                                  </span> <span class="r5">|</span>          
+<span class="r5">|</span> <span class="r20">Direct Fixes                                                                      </span> <span class="r5">|</span>          
+<span class="r5">|</span> <span class="r15">- Break the shortcut path before restarting the circuit.                          </span> <span class="r5">|</span>          
+<span class="r5">|</span> <span class="r15">                                                                                  </span> <span class="r5">|</span>          
+<span class="r5">|</span> <span class="r20">Teacher Actions                                                                   </span> <span class="r5">|</span>          
+<span class="r5">|</span> <span class="r15">- Escalate to instructor-led correction after repeated or safety-sensitive errors.</span> <span class="r5">|</span>          
+<span class="r5">|</span> <span class="r15">- Switch from autonomous coaching to supervised correction immediately.           </span> <span class="r5">|</span>          
+<span class="r5">+------------------------------------------------------------------------------------+</span>          
+
+<span class="r1">+---------------------------------- Showcase Interpretation -----------------------------------+</span>
+<span class="r1">|</span> <span class="r2">System Judgement</span>                                                                             <span class="r1">|</span>
+<span class="r1">|</span> <span class="r15">The wiring creates a near-zero-resistance path across the source and must be treated as </span>     <span class="r1">|</span>
+<span class="r1">|</span> <span class="r15">unsafe before any instructional discussion continues.</span>                                        <span class="r1">|</span>
+<span class="r1">|</span> <span class="r17">--------------------------------------------------------------------------------------------</span> <span class="r1">|</span>
+<span class="r1">|</span> <span class="r2">Pedagogical Interpretation</span>                                                                   <span class="r1">|</span>
+<span class="r1">|</span> <span class="r15">This is not merely a wrong answer; it is a safety-sensitive state. The instructional </span>        <span class="r1">|</span>
+<span class="r1">|</span> <span class="r15">priority shifts from conceptual coaching to immediate risk containment and supervised </span>       <span class="r1">|</span>
+<span class="r1">|</span> <span class="r15">correction.</span>                                                                                  <span class="r1">|</span>
+<span class="r1">|</span> <span class="r17">--------------------------------------------------------------------------------------------</span> <span class="r1">|</span>
+<span class="r1">|</span> <span class="r2">Presentation Script</span>                                                                          <span class="r1">|</span>
+<span class="r1">|</span> <span class="r21">- Zhao Mingrui is currently working on &#x27;Identify and eliminate unsafe low-resistance paths </span>  <span class="r1">|</span>
+<span class="r1">|</span> <span class="r21">in a basic power circuit.&#x27; in scenario &#x27;Scenario C - Source Short-Risk Escalation&#x27;.</span>          <span class="r1">|</span>
+<span class="r1">|</span> <span class="r21">- The system classifies the circuit state as Unsafe Wiring with risk level critical after </span>   <span class="r1">|</span>
+<span class="r1">|</span> <span class="r21">attempt 2.</span>                                                                                   <span class="r1">|</span>
+<span class="r1">|</span> <span class="r21">- Pause autonomous guidance, bring the instructor into the loop, and use the current state </span>  <span class="r1">|</span>
+<span class="r1">|</span> <span class="r21">as a supervised correction case.</span>                                                             <span class="r1">|</span>
+<span class="r1">|</span> <span class="r17">--------------------------------------------------------------------------------------------</span> <span class="r1">|</span>
+<span class="r1">|</span> <span class="r2">Teacher Note</span>                                                                                 <span class="r1">|</span>
+<span class="r1">|</span> <span class="r15">Use this case to emphasize the difference between conceptual mistakes and safety-sensitive </span>  <span class="r1">|</span>
+<span class="r1">|</span> <span class="r15">mistakes.</span>                                                                                    <span class="r1">|</span>
+<span class="r1">+----------------------------------------------------------------------------------------------+</span>
+
+           <span class="r22">GMAT showcase mode: from circuit state reasoning to instructional action.</span>            
+</code></pre>
+</body>
+</html>

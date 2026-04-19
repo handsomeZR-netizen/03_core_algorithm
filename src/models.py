@@ -128,3 +128,100 @@ class TeachingFeedback:
             "direct_fixes": self.direct_fixes,
             "teacher_actions": self.teacher_actions,
         }
+
+
+@dataclass(slots=True)
+class DemoScenario:
+    """Stores display-oriented metadata for one curated showcase scenario."""
+
+    id: str
+    title: str
+    subtitle: str
+    example_file: str
+    student_name: str
+    student_level: str
+    lab_task: str
+    attempt_index: int
+    elapsed_seconds: int
+    error_count: int
+    engagement_score: int
+    confidence_score: int
+    learning_objective: str
+    presentation_summary: str
+    teacher_note: str
+    force_teacher_handoff: bool = False
+
+    def to_dict(self) -> dict[str, Any]:
+        """Serialize the showcase scenario metadata."""
+        return {
+            "id": self.id,
+            "title": self.title,
+            "subtitle": self.subtitle,
+            "example_file": self.example_file,
+            "student_name": self.student_name,
+            "student_level": self.student_level,
+            "lab_task": self.lab_task,
+            "attempt_index": self.attempt_index,
+            "elapsed_seconds": self.elapsed_seconds,
+            "error_count": self.error_count,
+            "engagement_score": self.engagement_score,
+            "confidence_score": self.confidence_score,
+            "learning_objective": self.learning_objective,
+            "presentation_summary": self.presentation_summary,
+            "teacher_note": self.teacher_note,
+            "force_teacher_handoff": self.force_teacher_handoff,
+        }
+
+
+@dataclass(slots=True)
+class DemoSummaryCard:
+    """Stores one high-level summary card for the showcase renderer."""
+
+    title: str
+    value: str
+    detail: str
+    tone: str
+
+    def to_dict(self) -> dict[str, Any]:
+        """Serialize the summary card for exports."""
+        return {
+            "title": self.title,
+            "value": self.value,
+            "detail": self.detail,
+            "tone": self.tone,
+        }
+
+
+@dataclass(slots=True)
+class DemoPresentation:
+    """Stores display-ready copy and metadata for the demo renderer."""
+
+    scenario_title: str
+    scenario_subtitle: str
+    summary_cards: list[DemoSummaryCard] = field(default_factory=list)
+    system_judgement: str = ""
+    pedagogical_interpretation: str = ""
+    recommended_next_step: str = ""
+    presentation_script: list[str] = field(default_factory=list)
+    teacher_note: str = ""
+    metadata_rows: list[tuple[str, str]] = field(default_factory=list)
+    heuristic_hints_display: list[str] = field(default_factory=list)
+    direct_fixes_display: list[str] = field(default_factory=list)
+    teacher_actions_display: list[str] = field(default_factory=list)
+
+    def to_dict(self) -> dict[str, Any]:
+        """Serialize the presentation copy for machine-readable exports."""
+        return {
+            "scenario_title": self.scenario_title,
+            "scenario_subtitle": self.scenario_subtitle,
+            "summary_cards": [card.to_dict() for card in self.summary_cards],
+            "system_judgement": self.system_judgement,
+            "pedagogical_interpretation": self.pedagogical_interpretation,
+            "recommended_next_step": self.recommended_next_step,
+            "presentation_script": self.presentation_script,
+            "teacher_note": self.teacher_note,
+            "metadata_rows": self.metadata_rows,
+            "heuristic_hints_display": self.heuristic_hints_display,
+            "direct_fixes_display": self.direct_fixes_display,
+            "teacher_actions_display": self.teacher_actions_display,
+        }

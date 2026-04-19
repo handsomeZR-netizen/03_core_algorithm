@@ -1,0 +1,18 @@
+{
+  "id": "ammeter_miswire",
+  "title": "Scenario B - Ammeter Parallel Miswire",
+  "subtitle": "A measurement error that is electrically detectable and pedagogically interpretable.",
+  "example_file": "ammeter_parallel_error.json",
+  "student_name": "Xu Jiayi",
+  "student_level": "Introductory DC Lab",
+  "lab_task": "Measure branch current without bypassing the target load.",
+  "attempt_index": 2,
+  "elapsed_seconds": 238,
+  "error_count": 2,
+  "engagement_score": 86,
+  "confidence_score": 62,
+  "learning_objective": "Distinguish current measurement from voltage observation.",
+  "presentation_summary": "The solver detects a measurable state, but the instrumentation strategy collapses the intended branch logic.",
+  "teacher_note": "This scenario is useful for showing that a circuit may still be numerically solvable while remaining instructionally incorrect.",
+  "force_teacher_handoff": false
+}

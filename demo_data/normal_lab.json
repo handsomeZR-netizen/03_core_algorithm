@@ -1,0 +1,18 @@
+{
+  "id": "normal_lab",
+  "title": "Scenario A - Stable Series Measurement",
+  "subtitle": "Closed-loop wiring with a valid current path and consistent quantitative output.",
+  "example_file": "series_ok.json",
+  "student_name": "Lin Yutong",
+  "student_level": "Introductory DC Lab",
+  "lab_task": "Verify Ohm's law in a single-loop DC circuit.",
+  "attempt_index": 1,
+  "elapsed_seconds": 142,
+  "error_count": 0,
+  "engagement_score": 91,
+  "confidence_score": 84,
+  "learning_objective": "Understand closed circuits and ideal switch behavior.",
+  "presentation_summary": "The learner assembled a valid loop and produced a stable current reading that supports conceptual explanation.",
+  "teacher_note": "Use the switch and resistor voltage distribution to explain why ideal switches contribute almost no voltage drop.",
+  "force_teacher_handoff": false
+}

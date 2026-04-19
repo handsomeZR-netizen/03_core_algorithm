@@ -1,0 +1,236 @@
+{
+  "scenario": {
+    "id": "normal_lab",
+    "title": "Scenario A - Stable Series Measurement",
+    "subtitle": "Closed-loop wiring with a valid current path and consistent quantitative output.",
+    "example_file": "series_ok.json",
+    "student_name": "Lin Yutong",
+    "student_level": "Introductory DC Lab",
+    "lab_task": "Verify Ohm's law in a single-loop DC circuit.",
+    "attempt_index": 1,
+    "elapsed_seconds": 142,
+    "error_count": 0,
+    "engagement_score": 91,
+    "confidence_score": 84,
+    "learning_objective": "Understand closed circuits and ideal switch behavior.",
+    "presentation_summary": "The learner assembled a valid loop and produced a stable current reading that supports conceptual explanation.",
+    "teacher_note": "Use the switch and resistor voltage distribution to explain why ideal switches contribute almost no voltage drop.",
+    "force_teacher_handoff": false
+  },
+  "circuit": {
+    "name": "正常串联电路",
+    "description": "单电源、单开关、单电阻的最小闭环，用于展示基础 MNA 求解。",
+    "ground": "gnd",
+    "components": [
+      {
+        "id": "V1",
+        "type": "voltage_source",
+        "name": "直流电源",
+        "nodes": [
+          "n1",
+          "gnd"
+        ],
+        "params": {
+          "voltage": 12.0
+        }
+      },
+      {
+        "id": "S1",
+        "type": "switch",
+        "name": "主开关",
+        "nodes": [
+          "n1",
+          "n2"
+        ],
+        "params": {
+          "state": "closed"
+        }
+      },
+      {
+        "id": "R1",
+        "type": "resistor",
+        "name": "负载电阻",
+        "nodes": [
+          "n2",
+          "gnd"
+        ],
+        "params": {
+          "resistance": 100.0
+        }
+      }
+    ]
+  },
+  "solver_result": {
+    "solved": true,
+    "status": "solved",
+    "message": "DC operating point solved successfully.",
+    "node_voltages": {
+      "gnd": 0.0,
+      "n1": 12.0,
+      "n2": 11.99999988
+    },
+    "element_results": [
+      {
+        "id": "V1",
+        "type": "voltage_source",
+        "name": "直流电源",
+        "nodes": [
+          "n1",
+          "gnd"
+        ],
+        "current": -0.11999999891175872,
+        "voltage_drop": 12.0,
+        "power": -1.4399999869411046,
+        "extra": {
+          "voltage": 12.0,
+          "model": "independent_voltage_source"
+        }
+      },
+      {
+        "id": "S1",
+        "type": "switch",
+        "name": "主开关",
+        "nodes": [
+          "n1",
+          "n2"
+        ],
+        "current": 0.11999999927070348,
+        "voltage_drop": 1.1999999927070348e-07,
+        "power": 1.4399999824968837e-08,
+        "extra": {
+          "effective_resistance": 1e-06,
+          "model": "closed_switch"
+        }
+      },
+      {
+        "id": "R1",
+        "type": "resistor",
+        "name": "负载电阻",
+        "nodes": [
+          "n2",
+          "gnd"
+        ],
+        "current": 0.11999999880000001,
+        "voltage_drop": 11.99999988,
+        "power": 1.4399999712000002,
+        "extra": {
+          "effective_resistance": 100.0,
+          "model": "resistor"
+        }
+      }
+    ],
+    "total_power": -1.3411045607369942e-09,
+    "metadata": {
+      "node_map": {
+        "n1": 0,
+        "n2": 1
+      },
+      "voltage_source_currents": {
+        "V1": -0.11999999891175872
+      },
+      "todo": [
+        "TODO: 仅支持直流稳态两端器件网络。",
+        "TODO: 暂不支持受控源、交流分析、瞬态分析。"
+      ]
+    }
+  },
+  "diagnostics": [],
+  "teaching_feedback": {
+    "overall_level": "normal",
+    "heuristic_hints": [
+      "当前电路结构正常，可以继续观察各节点电压和支路电流。"
+    ],
+    "direct_fixes": [
+      "无需纠错，可尝试修改参数观察串并联规律。"
+    ],
+    "teacher_actions": [
+      "教师可引导学生解释求解结果与欧姆定律的一致性。"
+    ]
+  },
+  "presentation": {
+    "scenario_title": "Scenario A - Stable Series Measurement",
+    "scenario_subtitle": "Closed-loop wiring with a valid current path and consistent quantitative output.",
+    "summary_cards": [
+      {
+        "title": "Circuit State",
+        "value": "Closed Loop",
+        "detail": "The learner assembled a valid loop and produced a stable current reading that supports conceptual explanation.",
+        "tone": "good"
+      },
+      {
+        "title": "Solver Status",
+        "value": "Solved",
+        "detail": "DC operating point solved successfully.",
+        "tone": "good"
+      },
+      {
+        "title": "Risk Level",
+        "value": "Stable",
+        "detail": "No structural warnings were triggered in the current circuit.",
+        "tone": "good"
+      },
+      {
+        "title": "Intervention",
+        "value": "Reflective Coaching",
+        "detail": "The system can continue with reflective feedback.",
+        "tone": "info"
+      }
+    ],
+    "system_judgement": "The current circuit is structurally valid and the solver returns a stable DC operating point labeled as 'Closed Loop'.",
+    "pedagogical_interpretation": "The scenario now supports a more conceptual discussion around understand closed circuits and ideal switch behavior. instead of basic troubleshooting.",
+    "recommended_next_step": "Continue with conceptual coaching and ask the learner to explain the observed node voltages in their own words.",
+    "presentation_script": [
+      "Lin Yutong is currently working on 'Verify Ohm's law in a single-loop DC circuit.' in scenario 'Scenario A - Stable Series Measurement'.",
+      "The system classifies the circuit state as Closed Loop with risk level stable after attempt 1.",
+      "Continue with conceptual coaching and ask the learner to explain the observed node voltages in their own words."
+    ],
+    "teacher_note": "Use the switch and resistor voltage distribution to explain why ideal switches contribute almost no voltage drop.",
+    "metadata_rows": [
+      [
+        "Student",
+        "Lin Yutong"
+      ],
+      [
+        "Level",
+        "Introductory DC Lab"
+      ],
+      [
+        "Task",
+        "Verify Ohm's law in a single-loop DC circuit."
+      ],
+      [
+        "Attempt",
+        "No. 1"
+      ],
+      [
+        "Elapsed",
+        "142s"
+      ],
+      [
+        "Errors",
+        "0"
+      ],
+      [
+        "Engagement",
+        "91/100"
+      ],
+      [
+        "Confidence",
+        "84/100"
+      ],
+      [
+        "Objective",
+        "Understand closed circuits and ideal switch behavior."
+      ]
+    ],
+    "heuristic_hints_display": [
+      "The circuit is structurally stable, so the learner can move from troubleshooting to explanation."
+    ],
+    "direct_fixes_display": [
+      "Use the solved voltages and currents to explain why the current reading matches the load value."
+    ],
+    "teacher_actions_display": [
+      "Keep the instructor in a light-touch coaching role while the learner explains the result."
+    ]
+  }
+}

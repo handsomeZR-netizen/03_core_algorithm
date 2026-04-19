@@ -1,0 +1,18 @@
+{
+  "id": "short_risk",
+  "title": "Scenario C - Source Short-Risk Escalation",
+  "subtitle": "A high-priority failure mode where safety takes precedence over conceptual scaffolding.",
+  "example_file": "short_risk.json",
+  "student_name": "Zhao Mingrui",
+  "student_level": "Introductory DC Lab",
+  "lab_task": "Identify and eliminate unsafe low-resistance paths in a basic power circuit.",
+  "attempt_index": 2,
+  "elapsed_seconds": 97,
+  "error_count": 1,
+  "engagement_score": 73,
+  "confidence_score": 48,
+  "learning_objective": "Recognize why unsafe wiring must be handled before measurement reasoning.",
+  "presentation_summary": "The system detects an unsafe path across the source, so the teaching flow shifts into immediate containment and correction.",
+  "teacher_note": "Use this case to emphasize the difference between conceptual mistakes and safety-sensitive mistakes.",
+  "force_teacher_handoff": true
+}

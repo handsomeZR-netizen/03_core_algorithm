@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #1d4ed8; text-decoration-color: #1d4ed8}
+.r2 {color: #1d4ed8; text-decoration-color: #1d4ed8; font-weight: bold}
+.r3 {color: #0f172a; text-decoration-color: #0f172a; font-weight: bold}
+.r4 {color: #475569; text-decoration-color: #475569}
+.r5 {color: #0f766e; text-decoration-color: #0f766e}
+.r6 {color: #0f766e; text-decoration-color: #0f766e; background-color: #ecfdf5}
+.r7 {background-color: #ecfdf5}
+.r8 {color: #0f766e; text-decoration-color: #0f766e; background-color: #ecfdf5; font-weight: bold}
+.r9 {color: #334155; text-decoration-color: #334155; background-color: #ecfdf5}
+.r10 {color: #1d4ed8; text-decoration-color: #1d4ed8; background-color: #eff6ff}
+.r11 {background-color: #eff6ff}
+.r12 {color: #1d4ed8; text-decoration-color: #1d4ed8; background-color: #eff6ff; font-weight: bold}
+.r13 {color: #334155; text-decoration-color: #334155; background-color: #eff6ff}
+.r14 {color: #94a3b8; text-decoration-color: #94a3b8}
+.r15 {color: #0f172a; text-decoration-color: #0f172a}
+.r16 {font-weight: bold}
+.r17 {color: #cbd5e1; text-decoration-color: #cbd5e1}
+.r18 {color: #b45309; text-decoration-color: #b45309}
+.r19 {color: #0f766e; text-decoration-color: #0f766e; font-weight: bold}
+.r20 {color: #334155; text-decoration-color: #334155}
+.r21 {color: #0f766e; text-decoration-color: #0f766e; font-style: italic}
+body {
+    color: #0f172a;
+    background-color: #f8fafc;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit"><span class="r1">+----------------------------------------------------------------------------------------------+</span>
+<span class="r1">|</span>                                                                                              <span class="r1">|</span>
+<span class="r1">|</span>                                 <span class="r2">GMAT Electrical Lab Showcase</span>                                 <span class="r1">|</span>
+<span class="r1">|</span>                            <span class="r3">Scenario A - Stable Series Measurement</span>                            <span class="r1">|</span>
+<span class="r1">|</span>       <span class="r4">Closed-loop wiring with a valid current path and consistent quantitative output.</span>       <span class="r1">|</span>
+<span class="r1">|</span>   <span class="r5">   Lin Yutong - Introductory DC Lab - Objective: Understand closed circuits and ideal   </span>   <span class="r1">|</span>
+<span class="r1">|</span>   <span class="r5">                                    switch behavior.                                    </span>   <span class="r1">|</span>
+<span class="r1">|</span>                                                                                              <span class="r1">|</span>
+<span class="r1">+----------------------------------------------------------------------------------------------+</span>
+
+<span class="r6">+----------------------------------------------------------------------------------------------+</span>
+<span class="r6">|</span><span class="r7">                                                                                              </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r8">Circuit State                                                                             </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r8">                                       Closed Loop                                        </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r9">The learner assembled a valid loop and produced a stable current reading that supports    </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r9">conceptual explanation.                                                                   </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">                                                                                              </span><span class="r6">|</span>
+<span class="r6">+----------------------------------------------------------------------------------------------+</span>
+<span class="r6">+----------------------------------------------------------------------------------------------+</span>
+<span class="r6">|</span><span class="r7">                                                                                              </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r8">Solver Status                                                                             </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r8">                                          Solved                                          </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r9">DC operating point solved successfully.                                                   </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">                                                                                              </span><span class="r6">|</span>
+<span class="r6">+----------------------------------------------------------------------------------------------+</span>
+<span class="r6">+----------------------------------------------------------------------------------------------+</span>
+<span class="r6">|</span><span class="r7">                                                                                              </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r8">Risk Level                                                                                </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r8">                                          Stable                                          </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">  </span><span class="r9">No structural warnings were triggered in the current circuit.                             </span><span class="r7">  </span><span class="r6">|</span>
+<span class="r6">|</span><span class="r7">                                                                                              </span><span class="r6">|</span>
+<span class="r6">+----------------------------------------------------------------------------------------------+</span>
+<span class="r10">+----------------------------------------------------------------------------------------------+</span>
+<span class="r10">|</span><span class="r11">                                                                                              </span><span class="r10">|</span>
+<span class="r10">|</span><span class="r11">  </span><span class="r12">Intervention                                                                              </span><span class="r11">  </span><span class="r10">|</span>
+<span class="r10">|</span><span class="r11">  </span><span class="r12">                                   Reflective Coaching                                    </span><span class="r11">  </span><span class="r10">|</span>
+<span class="r10">|</span><span class="r11">  </span><span class="r13">The system can continue with reflective feedback.                                         </span><span class="r11">  </span><span class="r10">|</span>
+<span class="r10">|</span><span class="r11">                                                                                              </span><span class="r10">|</span>
+<span class="r10">+----------------------------------------------------------------------------------------------+</span>
+
+<span class="r14">+------------------------------------- Scenario Metadata --------------------------------------+</span>
+<span class="r14">|</span> <span class="r2">Student                        </span><span class="r15">Lin Yutong                                                   </span> <span class="r14">|</span>
+<span class="r14">|</span> <span class="r2">Level                          </span><span class="r15">Introductory DC Lab                                          </span> <span class="r14">|</span>
+<span class="r14">|</span> <span class="r2">Task                           </span><span class="r15">Verify Ohm&#x27;s law in a single-loop DC circuit.                </span> <span class="r14">|</span>
+<span class="r14">|</span> <span class="r2">Attempt                        </span><span class="r15">No. 1                                                        </span> <span class="r14">|</span>
+<span class="r14">|</span> <span class="r2">Elapsed                        </span><span class="r15">142s                                                         </span> <span class="r14">|</span>
+<span class="r14">|</span> <span class="r2">Errors                         </span><span class="r15">0                                                            </span> <span class="r14">|</span>
+<span class="r14">|</span> <span class="r2">Engagement                     </span><span class="r15">91/100                                                       </span> <span class="r14">|</span>
+<span class="r14">|</span> <span class="r2">Confidence                     </span><span class="r15">84/100                                                       </span> <span class="r14">|</span>
+<span class="r14">|</span> <span class="r2">Objective                      </span><span class="r15">Understand closed circuits and ideal switch behavior.        </span> <span class="r14">|</span>
+<span class="r14">+----------------------------------------------------------------------------------------------+</span>
+
+<span class="r14">+-------------------------------------+</span>           <span class="r14">+-------------------------------------+</span>       
+<span class="r14">|</span> <span class="r3">Circuit Components                 </span> <span class="r14">|</span>           <span class="r14">|</span> <span class="r3">Physical Reasoning Output          </span> <span class="r14">|</span>       
+<span class="r14">|</span> +---------------------------------+ <span class="r14">|</span>           <span class="r14">|</span> +---------------------------------+ <span class="r14">|</span>       
+<span class="r14">|</span> |<span class="r16"> ID </span>|<span class="r16"> Type           </span>|<span class="r16"> Nodes     </span>| <span class="r14">|</span>           <span class="r14">|</span> |<span class="r16"> Node      </span>|<span class="r16">         Voltage (V) </span>| <span class="r14">|</span>       
+<span class="r14">|</span> |----+----------------+-----------| <span class="r14">|</span>           <span class="r14">|</span> |-----------+---------------------| <span class="r14">|</span>       
+<span class="r14">|</span> |<span class="r2"> V1 </span>|<span class="r15"> voltage_source </span>|<span class="r4"> n1 -&gt; gnd </span>| <span class="r14">|</span>           <span class="r14">|</span> |<span class="r2"> gnd       </span>|<span class="r15">              0.0000 </span>| <span class="r14">|</span>       
+<span class="r14">|</span> |<span class="r2"> S1 </span>|<span class="r15"> switch         </span>|<span class="r4"> n1 -&gt; n2  </span>| <span class="r14">|</span>           <span class="r14">|</span> |<span class="r2"> n1        </span>|<span class="r15">             12.0000 </span>| <span class="r14">|</span>       
+<span class="r14">|</span> |<span class="r2"> R1 </span>|<span class="r15"> resistor       </span>|<span class="r4"> n2 -&gt; gnd </span>| <span class="r14">|</span>           <span class="r14">|</span> |<span class="r2"> n2        </span>|<span class="r15">             12.0000 </span>| <span class="r14">|</span>       
+<span class="r14">|</span> +---------------------------------+ <span class="r14">|</span>           <span class="r14">|</span> +---------------------------------+ <span class="r14">|</span>       
+<span class="r14">+-------------------------------------+</span>           <span class="r14">|</span> <span class="r17">---------------------------------- </span> <span class="r14">|</span>       
+                                                  <span class="r14">|</span> +---------------------------------+ <span class="r14">|</span>       
+                                                  <span class="r14">|</span> |<span class="r16"> Element   </span>|<span class="r16">    I (A) </span>|<span class="r16">    U (V) </span>| <span class="r14">|</span>       
+                                                  <span class="r14">|</span> |-----------+----------+----------| <span class="r14">|</span>       
+                                                  <span class="r14">|</span> |<span class="r2"> V1        </span>|  -0.1200 |  12.0000 | <span class="r14">|</span>       
+                                                  <span class="r14">|</span> |<span class="r2"> S1        </span>|   0.1200 |   0.0000 | <span class="r14">|</span>       
+                                                  <span class="r14">|</span> |<span class="r2"> R1        </span>|   0.1200 |  12.0000 | <span class="r14">|</span>       
+                                                  <span class="r14">|</span> +---------------------------------+ <span class="r14">|</span>       
+                                                  <span class="r14">+-------------------------------------+</span>       
+
+<span class="r18">+----------------------------------------------------------------------------------------------+</span>
+<span class="r18">|</span> <span class="r3">Diagnostic Signals                                                                          </span> <span class="r18">|</span>
+<span class="r18">|</span> <span class="r5">No structural issues were triggered in the current circuit.                                 </span> <span class="r18">|</span>
+<span class="r18">+----------------------------------------------------------------------------------------------+</span>
+<span class="r5">+----------------------------------------------------------------------------------------------+</span>
+<span class="r5">|</span> <span class="r19">Heuristic Hints                                                                             </span> <span class="r5">|</span>
+<span class="r5">|</span> <span class="r15">- The circuit is structurally stable, so the learner can move from troubleshooting to       </span> <span class="r5">|</span>
+<span class="r5">|</span> <span class="r15">explanation.                                                                                </span> <span class="r5">|</span>
+<span class="r5">|</span> <span class="r15">                                                                                            </span> <span class="r5">|</span>
+<span class="r5">|</span> <span class="r19">Direct Fixes                                                                                </span> <span class="r5">|</span>
+<span class="r5">|</span> <span class="r15">- Use the solved voltages and currents to explain why the current reading matches the load  </span> <span class="r5">|</span>
+<span class="r5">|</span> <span class="r15">value.                                                                                      </span> <span class="r5">|</span>
+<span class="r5">|</span> <span class="r15">                                                                                            </span> <span class="r5">|</span>
+<span class="r5">|</span> <span class="r19">Teacher Actions                                                                             </span> <span class="r5">|</span>
+<span class="r5">|</span> <span class="r15">- Keep the instructor in a light-touch coaching role while the learner explains the result. </span> <span class="r5">|</span>
+<span class="r5">+----------------------------------------------------------------------------------------------+</span>
+
+<span class="r1">+---------------------------------- Showcase Interpretation -----------------------------------+</span>
+<span class="r1">|</span> <span class="r2">System Judgement</span>                                                                             <span class="r1">|</span>
+<span class="r1">|</span> <span class="r15">The current circuit is structurally valid and the solver returns a stable DC operating point</span> <span class="r1">|</span>
+<span class="r1">|</span> <span class="r15">labeled as &#x27;Closed Loop&#x27;.</span>                                                                    <span class="r1">|</span>
+<span class="r1">|</span> <span class="r17">--------------------------------------------------------------------------------------------</span> <span class="r1">|</span>
+<span class="r1">|</span> <span class="r2">Pedagogical Interpretation</span>                                                                   <span class="r1">|</span>
+<span class="r1">|</span> <span class="r15">The scenario now supports a more conceptual discussion around understand closed circuits and</span> <span class="r1">|</span>
+<span class="r1">|</span> <span class="r15">ideal switch behavior. instead of basic troubleshooting.</span>                                     <span class="r1">|</span>
+<span class="r1">|</span> <span class="r17">--------------------------------------------------------------------------------------------</span> <span class="r1">|</span>
+<span class="r1">|</span> <span class="r2">Presentation Script</span>                                                                          <span class="r1">|</span>
+<span class="r1">|</span> <span class="r20">- Lin Yutong is currently working on &#x27;Verify Ohm&#x27;s law in a single-loop DC circuit.&#x27; in </span>     <span class="r1">|</span>
+<span class="r1">|</span> <span class="r20">scenario &#x27;Scenario A - Stable Series Measurement&#x27;.</span>                                           <span class="r1">|</span>
+<span class="r1">|</span> <span class="r20">- The system classifies the circuit state as Closed Loop with risk level stable after </span>       <span class="r1">|</span>
+<span class="r1">|</span> <span class="r20">attempt 1.</span>                                                                                   <span class="r1">|</span>
+<span class="r1">|</span> <span class="r20">- Continue with conceptual coaching and ask the learner to explain the observed node </span>        <span class="r1">|</span>
+<span class="r1">|</span> <span class="r20">voltages in their own words.</span>                                                                 <span class="r1">|</span>
+<span class="r1">|</span> <span class="r17">--------------------------------------------------------------------------------------------</span> <span class="r1">|</span>
+<span class="r1">|</span> <span class="r2">Teacher Note</span>                                                                                 <span class="r1">|</span>
+<span class="r1">|</span> <span class="r15">Use the switch and resistor voltage distribution to explain why ideal switches contribute </span>   <span class="r1">|</span>
+<span class="r1">|</span> <span class="r15">almost no voltage drop.</span>                                                                      <span class="r1">|</span>
+<span class="r1">+----------------------------------------------------------------------------------------------+</span>
+
+           <span class="r21">GMAT showcase mode: from circuit state reasoning to instructional action.</span>            
+</code></pre>
+</body>
+</html>

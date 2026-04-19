@@ -95,6 +95,37 @@ python -m src.cli --input examples/short_risk.json --fail-on-error
 pytest
 ```
 
+## Demo Mode
+
+The repository now includes a showcase-oriented CLI layer built for live demonstrations, screenshots, and one-screen summaries. It keeps the original solver intact while wrapping the outputs in a richer presentation flow.
+
+<p align="center">
+  <img src="artifacts/short_risk_shot.png" alt="Showcase-mode screenshot for the short-risk scenario" width="78%">
+</p>
+
+List curated scenarios:
+
+```bash
+python -m src.cli --list-scenarios
+```
+
+Launch the compact showcase mode:
+
+```bash
+python -m src.cli --demo --scenario normal_lab --compact
+```
+
+Export demo assets:
+
+```bash
+python -m src.cli --demo --scenario short_risk --compact \
+  --export-svg artifacts/short_risk.svg \
+  --export-html artifacts/short_risk.html \
+  --export-json artifacts/short_risk.json
+```
+
+The showcase mode is backed by curated metadata in `demo_data/`, so the current release can produce polished live-demo output without requiring any external LLM API.
+
 ## Example Scenarios
 
 ### 1. Normal Series Circuit
@@ -205,9 +236,13 @@ pytest
 
 ```text
 03_core_algorithm/
+├─ artifacts/
+├─ demo_data/
 ├─ README.md
 ├─ DEMO_GUIDE.md
+├─ SHOWCASE_GUIDE.md
 ├─ examples/
+├─ figures/
 ├─ src/
 └─ tests/
 ```
@@ -215,10 +250,13 @@ pytest
 关键入口：
 
 - [`src/cli.py`](src/cli.py): CLI 入口
+- [`src/demo_loader.py`](src/demo_loader.py): 演示场景加载
+- [`src/demo_presenter.py`](src/demo_presenter.py): Rich 展示层与导出
 - [`src/mna_solver.py`](src/mna_solver.py): MNA 直流求解
 - [`src/diagnostics.py`](src/diagnostics.py): 规则诊断
 - [`src/intervention.py`](src/intervention.py): 教学反馈生成
 - [`DEMO_GUIDE.md`](DEMO_GUIDE.md): 演示与展示建议
+- [`SHOWCASE_GUIDE.md`](SHOWCASE_GUIDE.md): 演示版工具使用说明
 
 ## Roadmap
 
@@ -238,8 +276,11 @@ pytest
 ## Related Files
 
 - [`DEMO_GUIDE.md`](DEMO_GUIDE.md): 演示顺序、截图建议与讲解逻辑
+- [`SHOWCASE_GUIDE.md`](SHOWCASE_GUIDE.md): Rich 展示版运行与导出说明
 - [`tests/`](tests/): 数值正确性、诊断规则和 CLI 烟雾测试
 - [`examples/`](examples/): 正常样例与错误样例集合
+- `demo_data/`: 预置演示场景元数据
+- `artifacts/`: 已导出的 SVG、HTML、JSON 和截图资产
 
 ## Attribution
 
