@@ -1,4 +1,34 @@
-# Grounded Multimodal Agentic Tutoring for Electrical Laboratory Learning
+# Electrical Lab Core Algorithm
+
+<!-- PORTFOLIO-SNAPSHOT:START -->
+<p align="left">
+  <img src="https://img.shields.io/badge/category-Education%20technology%20project-blue" alt="Category" />
+  <img src="https://img.shields.io/badge/status-Public%20portfolio%20artifact-2ea44f" alt="Status" />
+</p>
+
+> Core algorithm prototype for multimodal electrical-lab tutoring: circuit JSON, MNA solver, diagnostics, and HACP-style feedback.
+
+## Project Snapshot
+
+- Category: Education technology project
+- Stack: Python, ai-tutoring, algorithm, circuit-simulation, education-technology, python
+- Status: Public portfolio artifact
+
+## What This Demonstrates
+
+- Presents the project with a clear purpose, technology stack, and review path.
+- Shows applied AI workflow design in a concrete product or learning scenario.
+- Keeps implementation details and usage notes close to the code for easier reuse.
+
+## Quick Start
+
+```bash
+python -m pip install -r requirements.txt && python -m compileall .
+```
+
+<!-- PORTFOLIO-SNAPSHOT:END -->
+
+## Original Documentation
 
 <p align="left">
   <a href="https://github.com/handsomeZR-netizen"><img alt="GitHub Profile" src="https://img.shields.io/badge/GitHub-handsomeZR--netizen-181717?style=flat-square&logo=github"></a>
